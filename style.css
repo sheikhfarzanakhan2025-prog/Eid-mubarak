@@ -1,0 +1,83 @@
+:root {
+    --gold-gradient: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    --dark-deep: #05070a;
+    --glass: rgba(255, 255, 255, 0.03);
+    --gold-glow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--dark-deep);
+    color: #e0e0e0;
+    font-family: 'Hind Siliguri', sans-serif;
+    overflow-x: hidden;
+    background-image: radial-gradient(circle at center, #111b27 0%, #05070a 100%);
+}
+
+.bg-glow {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.2; z-index: -1;
+}
+
+.container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+
+.main-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(2.5rem, 10vw, 4.5rem);
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.sub-title { text-align: center; color: #b38728; letter-spacing: 4px; font-size: 0.8rem; margin-bottom: 50px; }
+
+.glass-box {
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 30px; padding: 35px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    margin-bottom: 40px; text-align: center;
+}
+
+input {
+    width: 100%; max-width: 350px; padding: 15px 25px;
+    background: rgba(0,0,0,0.5); border: 1px solid #b38728;
+    border-radius: 50px; color: #fff; font-size: 1.1rem; outline: none;
+}
+
+.btn-gold {
+    background: var(--gold-gradient); color: #1a1a1a;
+    padding: 15px 40px; border: none; border-radius: 50px;
+    font-weight: bold; font-family: 'Cinzel Decorative', serif;
+    cursor: pointer; transition: 0.4s;
+}
+
+.btn-gold:hover { transform: translateY(-3px); box-shadow: var(--gold-glow); }
+
+#cardCanvas {
+    width: 100%; aspect-ratio: 16/9; background: #0a0f16;
+    border: 2px solid #b38728; margin: 30px 0; border-radius: 15px;
+    position: relative; display: flex; flex-direction: column; 
+    justify-content: center; align-items: center;
+}
+
+#outputName {
+    font-size: clamp(1.8rem, 6vw, 3.5rem);
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.eid-sub { font-family: 'Cinzel Decorative', serif; color: #888; letter-spacing: 5px; }
+.card-branding { position: absolute; bottom: 10px; font-size: 0.6rem; color: #333; }
+
+.salami-grid { display: flex; justify-content: space-around; margin-bottom: 25px; }
+.stat-item p { font-size: 2rem; color: #fcf6ba; font-family: 'Cinzel Decorative'; }
+
+footer { text-align: center; padding: 50px; border-top: 1px solid rgba(255,255,255,0.05); }
+.branding span { background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; font-size: 1.4rem; }
